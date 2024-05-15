@@ -7,15 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "npm i ts-node && npm install prisma && prisma generate && prisma migrate dev && prisma db seed"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
     "classnames": "^2.5.1",
     "next": "14.1.0",
     "prettier": "^3.2.4",
+    "prisma": "^5.14.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-query": "^3.39.3",
+    "ts-node": "^10.9.2",
     "tw-merge": "^0.0.1-alpha.3"
   },
   "devDependencies": {
